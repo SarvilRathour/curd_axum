@@ -23,7 +23,7 @@ pub fn generate_token(user_id:&Uuid,secret:&str)->Result<String,jsonwebtoken::er
           &EncodingKey::from_secret(secret,as_ref()),
        )
 }
-pub fn validate_token(token:&str,secret:&str)->Result<Claims,jsonwebtoken::errors::Error>>{
+pub fn validate_token(token:&str,secret:&str)->Result<Claims,jsonwebtoken::errors::Error>{
         decode::<Claims>(
           token,
           &DecodingKey::from_secret(secret.as_ref()),

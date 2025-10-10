@@ -8,7 +8,6 @@ use handlers::something_check;
 mod models;
 mod repositories;
 mod schemas;
-mod auth;
 #[tokio::main]
 async fn main() {
     dotenvy::dotenv().ok();
